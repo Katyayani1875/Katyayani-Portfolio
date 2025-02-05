@@ -1,0 +1,150 @@
+/* Navbar Styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #000000 !important; 
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+/* Ensure navbar background stays black when hovered */
+.navbar:hover {
+  background-color: #000000 !important; 
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff; 
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  background: linear-gradient(90deg, #00d1b2, #6a00ff);
+  -webkit-background-clip: text;  
+  background-clip: text; 
+  color: transparent;
+}
+
+/* Remove underline from the logo link */
+.navbar-logo a {
+  text-decoration: none !important; 
+  color: inherit; 
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 2rem;
+}
+
+.navbar-links li {
+  display: inline-block;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+  border-radius: 5px; 
+}
+
+/* Hover Effect for Links */
+.navbar-links li a:hover {
+  color: #FFD700; 
+  transform: scale(1.1); 
+  border-bottom: 2px solid #FFD700; 
+}
+
+/* Active link state */
+.navbar-links li a.active {
+  color: #FFD700;
+  border-bottom: 2px solid #FFD700; 
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+    margin-right: 1rem;
+  }
+
+  .navbar-links li a {
+    font-size: 16px;
+  }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .navbar-links {
+    display: none; 
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li a {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-links li a:hover {
+    transform: none; 
+  }
+
+  .navbar-menu {
+    display: block; 
+    cursor: pointer;
+  }
+
+  .navbar-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px); 
+  }
+
+  .navbar-menu.active span:nth-child(2) {
+    opacity: 0; 
+  }
+
+  .navbar-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}

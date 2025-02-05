@@ -1,0 +1,250 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background: #000000;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: left;
+  padding: 0 2rem;
+  overflow: hidden;
+  margin-top: -5rem;
+}
+
+/* Glassmorphism Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+}
+
+/* Hero Container */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Profile Pic Container */
+.hero-profile-pic-container {
+  width: 750px;
+  height: auto;
+  margin-left: 0;
+  margin-right: -40rem;
+  margin-top: 6rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* Profile Pic */
+.hero-profile-pic {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.hero-profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Headline */
+.hero-headline {
+  font-size: 3.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00d1b2, #6a00ff);
+  -webkit-background-clip: text;  
+  background-clip: text; 
+  color: transparent;
+  animation: fadeInUp 1s ease-in-out;
+  letter-spacing: 1px;
+  margin-top: 5.5rem;
+}
+
+/* Subheadline */
+.hero-subheadline {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f7fafc;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1.3s ease-in-out;
+}
+
+/* Hero Tagline */
+.hero-tagline {
+  font-size: 1.3rem;
+  color: #e2e8f0;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+  margin-top: -1rem;
+  line-height: 1.5;
+  max-width: 90rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Buttons Container */
+.hero-buttons {
+  display: flex !important;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 2.9rem;
+  animation: fadeIn 2.3s ease-in-out;
+  z-index: 4 !important;
+  padding: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  flex-direction: row;
+  align-items: center; 
+}
+
+/* Common Button Style */
+.hero-btn {
+  transition: all 0.3s ease-in-out;
+  text-transform: none !important;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  background-color: #EDEDED;
+  color: #0A0A0A;
+  border: 2px solid #EDEDED;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  padding: 12px 24px !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 4px !important;
+  font-weight: 500;
+}
+
+/* Hover State for Buttons - Yellow effect */
+.hero-btn:hover {
+  background-color: #FFD700;
+  color: #0A0A0A;
+  border: 2px solid #FFD700;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume Button with Neon Glow */
+.resume-btn {
+  background: #EDEDED;
+  color: #0A0A0A;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-btn:hover {
+  background: #FFD700;
+  color: #0A0A0A;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Button with Soft Red Glow */
+.contact-btn {
+  background: #EDEDED;
+  color: #0A0A0A;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn:hover {
+  background: #FFD700;
+  color: #0A0A0A;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 1rem;
+    height: auto; 
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center; 
+  }
+
+  .hero-profile-pic-container {
+    width: 80%;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+
+  /* Adjust font sizes for better readability */
+  .hero-headline {
+    font-size: 2.8rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.6rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    gap: 1rem;
+    width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-profile-pic-container {
+    width: 70%; 
+    margin-bottom: 1rem;
+  }
+
+  /* Adjust font sizes for better readability */
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.4rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    gap: 1rem;
+    margin-top: 1.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+} 

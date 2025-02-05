@@ -1,0 +1,27 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Light Mode */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 40px 10px;
+  }
+}
