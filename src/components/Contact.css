@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   padding: 3rem 2rem;
-  background-color: #f9fafb;
-  height: 800px;
+  background-color: #ecefef;
+  height: 900px;
   opacity: 0;
   animation: fadeIn 1.5s ease-out forwards; 
 }

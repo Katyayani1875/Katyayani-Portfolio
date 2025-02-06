@@ -8,7 +8,8 @@ function Hero() {
       <div className="hero-overlay"></div> {/* Gradient Overlay */}
       <div className="hero-container">
         <div className="hero-text">
-          <h1 className="hero-headline">Katyayani Mishra <h2 className="hero-subheadline">MERN Stack | Web Enthusiast</h2></h1>
+          <h1 className="hero-headline">Katyayani Mishra</h1>
+          <h2 className="hero-subheadline">MERN Stack | Web Enthusiast</h2>
           <p className="hero-tagline">
             Welcome! I'm Katyayani Mishra, a dedicated MERN Stack Web Developer. Crafting seamless web 
             experiences with precision and creativity.
