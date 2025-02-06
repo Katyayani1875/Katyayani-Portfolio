@@ -2,7 +2,7 @@
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #000000 !important; 
+  background-color: #000000 !important;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -10,30 +10,33 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
   transition: background-color 0.3s ease;
+  width: 100%; 
+  box-sizing: border-box; 
+  overflow-x: hidden; 
 }
 
 /* Ensure navbar background stays black when hovered */
 .navbar:hover {
-  background-color: #000000 !important; 
+  background-color: #000000 !important;
 }
 
 /* Navbar Logo */
 .navbar-logo {
   font-size: 28px;
   font-weight: bold;
-  color: #fff; 
+  color: #fff;
   letter-spacing: 1px;
   transition: color 0.3s ease;
   background: linear-gradient(90deg, #00d1b2, #6a00ff);
-  -webkit-background-clip: text;  
-  background-clip: text; 
+  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
 /* Remove underline from the logo link */
 .navbar-logo a {
-  text-decoration: none !important; 
-  color: inherit; 
+  text-decoration: none !important;
+  color: inherit;
 }
 
 /* Navbar Links */
@@ -54,20 +57,20 @@
   font-size: 18px;
   padding: 8px 12px;
   transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 /* Hover Effect for Links */
 .navbar-links li a:hover {
-  color: #FFD700; 
-  transform: scale(1.1); 
-  border-bottom: 2px solid #FFD700; 
+  color: #FFD700;
+  transform: scale(1.1);
+  border-bottom: 2px solid #FFD700;
 }
 
 /* Active link state */
 .navbar-links li a.active {
   color: #FFD700;
-  border-bottom: 2px solid #FFD700; 
+  border-bottom: 2px solid #FFD700;
 }
 
 /* Responsive Styles */
@@ -92,6 +95,7 @@
     padding: 15px 15px;
     flex-direction: row;
     align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
   }
 
   .navbar-logo {
@@ -106,12 +110,11 @@
 
   .navbar-links li {
     text-align: center;
-    width: 100%;
+    width: auto; 
   }
 
   .navbar-links li a {
     font-size: 16px;
     padding: 10px;
-    width: 100%;
   }
 }
