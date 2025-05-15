@@ -3,9 +3,10 @@
   justify-content: space-between;
   padding: 3rem 2rem;
   background-color: #ecefef;
-  height: 900px;
+  height: auto;
   opacity: 0;
-  animation: fadeIn 1.5s ease-out forwards; 
+  animation: fadeIn 1.5s ease-out forwards;
+  flex-wrap: wrap; 
 }
 
 .contact-container {
@@ -20,7 +21,7 @@
   width: 45%;
   text-align: left;
   opacity: 0;
-  animation: slideInLeft 1s ease-out forwards; 
+  animation: slideInLeft 1s ease-out forwards;
 }
 
 .contact-info-left h2 {
@@ -38,7 +39,7 @@
   margin-bottom: 2rem;
   font-style: italic;
   opacity: 0;
-  animation: fadeIn 1.5s ease-out 1s forwards; 
+  animation: fadeIn 1.5s ease-out 1s forwards;
 }
 
 .contact-links {
@@ -53,7 +54,7 @@
   font-size: 1.1rem;
   color: #2d3748;
   opacity: 0;
-  animation: fadeIn 1s ease-out 1.5s forwards; 
+  animation: fadeIn 1s ease-out 1.5s forwards;
 }
 
 .contact-item .contact-icon {
@@ -75,7 +76,7 @@
 }
 
 .contact-item:hover .contact-icon {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 .contact-form-right {
@@ -86,14 +87,15 @@
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  animation: slideInRight 1s ease-out forwards; 
+  animation: slideInRight 1s ease-out forwards;
+  min-width: 350px; /* Prevent form from becoming too small */
 }
 
 .contact-form-right h3 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   opacity: 0;
-  animation: fadeIn 1.5s ease-out 1s forwards; 
+  animation: fadeIn 1.5s ease-out 1s forwards;
 }
 
 .form-group {
@@ -105,7 +107,8 @@
   color: #2d3748;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 0.75rem;
   border-radius: 5px;
@@ -134,7 +137,7 @@
 
 .submit-btn:hover {
   background-color: #38a169;
-  transform: scale(1.05); /* Button hover effect */
+  transform: scale(1.05);
 }
 
 /* Animation keyframes */
@@ -167,4 +170,45 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .contact-info-left, .contact-form-right {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .contact-info-left h2 {
+    font-size: 2rem;
+  }
+
+  .contact-info-left p {
+    font-size: 1rem;
+  }
+
+  .contact-form-right h3 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Add this if there is a container wrapping the entire section */
+.contact-wrapper {
+  background-color: white; 
+  margin-bottom: 0; 
 }
