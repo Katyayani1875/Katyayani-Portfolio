@@ -16,7 +16,7 @@ function Hero() {
             Let's collaborate and bring your vision to life!
           </p>
           <div className="hero-buttons">
-            <a href="/assets/KatyayaniResume.pdf" 
+            <a href="/assets/Katyayani_Mishra_Resume.pdf" 
                className="hero-btn resume-btn" 
                target="_blank" 
                rel="noopener noreferrer">
